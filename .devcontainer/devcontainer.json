@@ -1,0 +1,5 @@
+{
+  "name": "devcx Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  "postCreateCommand": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/install-claude-code.sh"
+}
