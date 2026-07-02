@@ -6,6 +6,8 @@
 
 A smart wrapper for Dev Container CLI.
 
+![devcx demo: list, select, which, up --dry-run, and exec --dry-run in a workspace with three devcontainer configs](assets/demo.gif)
+
 Repositories with multiple `devcontainer.json` files force you to pass
 `--config .devcontainer/<name>/devcontainer.json` on every `devcontainer`
 invocation: the Dev Container CLI only auto-detects
