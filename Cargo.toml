@@ -5,6 +5,7 @@ edition = "2024"
 rust-version = "1.85"
 description = "A smart wrapper for Dev Container CLI"
 repository = "https://github.com/shutx-net/devcx"
+license = "Apache-2.0"
 
 [dependencies]
 anyhow = "1.0.103"

@@ -148,3 +148,7 @@ devcx select
    per-workspace cache when it is still valid, interactively otherwise.
 4. Executes `devcontainer <subcommand> --workspace-folder <abs>
    --config <abs> <your args...>` and propagates its exit code.
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
