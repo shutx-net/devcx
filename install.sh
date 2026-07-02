@@ -46,7 +46,10 @@ case "$os" in
 esac
 
 # --- Resolve download URL ---------------------------------------------------
+# taiki-e/upload-rust-binary-action names the checksum file after the binary
+# and target only — it does NOT include the archive's .tar.gz suffix.
 archive="${BIN}-${target}.tar.gz"
+checksum="${BIN}-${target}.sha256"
 if [ -n "${DEVCX_VERSION:-}" ]; then
   base_url="https://github.com/${REPO}/releases/download/${DEVCX_VERSION}"
 else
@@ -59,14 +62,14 @@ trap 'rm -rf "$tmpdir"' EXIT
 
 echo "Downloading ${base_url}/${archive} ..." >&2
 curl -fsSL -o "${tmpdir}/${archive}" "${base_url}/${archive}"
-curl -fsSL -o "${tmpdir}/${archive}.sha256" "${base_url}/${archive}.sha256"
+curl -fsSL -o "${tmpdir}/${checksum}" "${base_url}/${checksum}"
 
 (
   cd "$tmpdir"
   if command -v sha256sum >/dev/null 2>&1; then
-    sha256sum -c "${archive}.sha256" >&2
+    sha256sum -c "${checksum}" >&2
   elif command -v shasum >/dev/null 2>&1; then
-    shasum -a 256 -c "${archive}.sha256" >&2
+    shasum -a 256 -c "${checksum}" >&2
   else
     err "neither sha256sum nor shasum found; cannot verify download"
   fi
