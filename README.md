@@ -1,5 +1,9 @@
 # devcx
 
+[![CI](https://github.com/shutx-net/devcx/actions/workflows/ci.yml/badge.svg)](https://github.com/shutx-net/devcx/actions/workflows/ci.yml)
+[![Rust](https://img.shields.io/badge/rust-1.85%2B-orange.svg)](https://www.rust-lang.org)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
 A smart wrapper for Dev Container CLI.
 
 Repositories with multiple `devcontainer.json` files force you to pass
