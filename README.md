@@ -44,8 +44,8 @@ extract, and put the binary on your `PATH`. For `x86_64-unknown-linux-musl`:
 
 ```bash
 curl -fsSLO https://github.com/shutx-net/devcx/releases/latest/download/devcx-x86_64-unknown-linux-musl.tar.gz
-curl -fsSLO https://github.com/shutx-net/devcx/releases/latest/download/devcx-x86_64-unknown-linux-musl.tar.gz.sha256
-sha256sum -c devcx-x86_64-unknown-linux-musl.tar.gz.sha256
+curl -fsSLO https://github.com/shutx-net/devcx/releases/latest/download/devcx-x86_64-unknown-linux-musl.sha256
+sha256sum -c devcx-x86_64-unknown-linux-musl.sha256
 tar -xzf devcx-x86_64-unknown-linux-musl.tar.gz
 sudo mv devcx /usr/local/bin/
 ```
